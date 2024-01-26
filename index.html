@@ -1,92 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
+  <style>
+    html {
+      background-color: #bfccb5;
+      scroll-behavior: smooth; /* Enable smooth scrolling */
+    }
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+    h1, h3, h4 {
+      color: #263a29;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      margin-top: 20px;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px;
+    }
+    .a, .b, .c, .e {
+      text-align: center;
+      padding: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .a:hover, .b:hover, .c:hover, .e:hover {
+      background-color: #ddd;
+    }
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -60px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+    .ff {
+      margin-left: 25%;
+      margin-top: 20px;
+      
+    }
+    footer {
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>My Resume</title>
 </head>
 <body>
-    <h1>Lalit Singh</h1>
+  <div class="container">
+    <h1>My Resume</h1>
+    <table>
+      <tbody>
+        <tr>
+          <th></th>
+          <td class="a">
+            <a href="#Skills">Skills</a>
+          </td>
+          <td class="b">
+            <a href="#Certificates">Certificates</a>
+          </td>
+          <td class="c">
+            <a href="#Footer">Contact Us</a>
+          </td>
+          <td class="e">
+            <a href="#Interest">Interests</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
     <img src="./IMG-20211015-WA0026.jpg" height="100" />
     <p>I am currently pursuing Btech from VIT Chennai in Computer Science. I am studying in 2nd Year. </p>
     <hr size="4"/>
-    <h1>Education</h1>
-    <ul>
-        <li>Scored 94.8% in 10th from Ryan International School</li>
-        <li>Scored 86% in 12th from Ram-eesh International School</li>
-        <li>Pursue Btech in CSE from VIT Chennai</li>
-    </ul>
+    <section id="Education">
+      <h1>Education</h1>
+      <ul>
+          <li>Scored 94.8% in 10th from Ryan International School</li>
+          <li>Scored 86% in 12th from Ram-eesh International School</li>
+          <li>Pursue Btech in CSE from VIT Chennai</li>
+      </ul>
+    </section>
     <hr size="4"/>
-    <h1>Skills</h1>
-    <ul>
-        <li>C/Cpp</li>
-        <li>Java</li>
-        <li>Data Structures</li>
-        <li>HTML</li>
-        <li>Figma</li>
-    </ul>
-    <table cellspacing="40">
-        <tbody><tr>
-          <td>
-            <table cellspacing="20">
-              <thead>
-                <tr>
-                  <th>Skill</th>
-                  <th>Rating</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>HTML5</td>
-                  <td>⭐⭐⭐⭐</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr>
-                  <td>CSS3</td>
-                  <td>⭐⭐</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr>
-                  <td>C Programming</td>
-                  <td>⭐⭐⭐⭐⭐</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr>
-                  <td>Java</td>
-                  <td>⭐⭐⭐⭐</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr>
-                  <td>Figma</td>
-                  <td>⭐⭐⭐</td>
-                </tr>
-              </tbody>
-            </table>
-           </td>
-        </tr>
-
-        </tbody>
-    </table>
+    <section id="Skills">
+      <h1>Skills </h1>
+      <ul>
+          <li>C/Cpp</li>
+          <li>Java</li>
+          <li>Data Structures</li>
+          <li>HTML</li>
+          <li>Figma</li>
+      </ul>
+      <table cellspacing="40">
+          <tbody><tr>
+            <td>
+              <table cellspacing="20">
+                <thead>
+                  <tr>
+                    <th>Skill</th>
+                    <th>Rating</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>HTML5</td>
+                    <td class="tooltip">⭐⭐⭐⭐
+                      <span class="tooltiptext">Advanced</span>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>CSS3</td>
+                    <td class="tooltip">⭐⭐
+                      <span class="tooltiptext">Intermediate</span>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>C Programming</td>
+                    <td class="tooltip">⭐⭐⭐⭐⭐
+                      <span class="tooltiptext">Expert</span>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>Java</td>
+                    <td class="tooltip">⭐⭐⭐⭐
+                      <span class="tooltiptext">Advanced</span>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>Figma</td>
+                    <td class="tooltip">⭐⭐⭐
+                      <span class="tooltiptext">Intermediate</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          </tbody>
+      </table>
+    </section>
     <hr size="4"/>
-    <h1>Certificates</h1>
-    <ul>
-        <li>NTSE Stage 1 Qualified</li>
-        <li>Inter School Chess Competition 3rd</li>
-
-    </ul>
+    <section id="Certificates">
+      <h1>Certificates</h1>
+      <ul>
+          <li>NTSE Stage 1 Qualified</li>
+          <li>Inter School Chess Competition 3rd</li>
+      </ul>
+    </section>
     <hr size="4"/>
-    <h1>Other</h1>
-    <a href="./4.3+HTML+Portfolio+Project/4.3 HTML Porfolio Project/public/contact.html">Contact Me</a>
-    <footer>
-        <small>
-          Copyright © 2024 Lalit Singh Website. All Rights Reserved.
-        </small>
-      </footer>
-    </body>
-    
+    <section id="Interest">
+      <h1>EXTRA CURRICULAR ACTIVITIES</h1>
+      <h3>SPORTS</h3>
+      <p><em>Balanced a full academic course load with competition, practices, training sessions, and team meetings as part of Quiz team and Boys Chess team.</em></p>
+      <h4>Captain - Ultimate frisbee Aug 2022 - Dec 2022</h4>
+      <p>
+        Captain and team manager of the School Cricket team for a period of two years.
+        Lead the team for major tournaments including District School Ultimate Championship(NCUC) and
+        Regionals(SGR) while in tenure.
+        Lead the team to improve School rankings during tenure.
+      </p>
+    </section>
+    <footer id="Footer">
+      <div class="ff">
+        <a href="https://www.linkedin.com/in/lalit-singh-2b67b027a/"><i class="fa fa-linkedin-square" style="font-size: 24px; color: black;"></i></a>
+        <a href="mailto: chaharlalit24@gmail.com"><i class="fa fa-envelope-o" style="font-size: 24px; color: black;"></i></a>
+      </div>
+      <small>
+        Copyright © 2024 Lalit Singh Website. All Rights Reserved.
+      </small>
+    </footer>
+  </div>
 </body>
 </html>
